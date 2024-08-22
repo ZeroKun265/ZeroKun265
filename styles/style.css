@@ -38,6 +38,7 @@ body {
     background-color: var(--main-color-1);
     color: var(--text-color);
     font-family: monospace;
+    min-width: 100vh;
 }
 
 .light-mode {
