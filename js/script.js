@@ -96,6 +96,9 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("cv-menu-button").addEventListener("click", function() {
                 window.location.href = "cv.html";
             })
+            document.getElementById("privacy-menu-button").addEventListener("click", function() {
+                window.location.href = "privacy.html";
+            })
             document.getElementById("socials-menu-button").addEventListener("click", function() {
                 window.location.href = "socials.html";
             })
