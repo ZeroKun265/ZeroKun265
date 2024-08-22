@@ -1,0 +1,245 @@
+.content {
+    align-items: center;
+    padding: 100px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-family: monospace;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h1 {
+    font-size: 32px;
+}
+body {
+    text-align: justify;
+    margin: 0px;
+    background-color: var(--main-color-1);
+    color: var(--text-color);
+    font-family: monospace;
+}
+
+.light-mode {
+    --debug-color: red;
+    --main-color-1: #D4F2D2;
+    --main-color-2: #b2beb1;
+    --secondary-color: #615f81;
+    --accent-color: #34113F;
+    --text-color: #08090A;
+}
+
+.dark-mode {
+    --debug-color: darkblue;
+    --main-color-1: #08090A;
+    --main-color-2: #272a2e;
+    --secondary-color: #4F518C;
+    --text-color: #D4F2D2;
+    --accent-color: #EA859E;
+}
+                    
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--main-color-2);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.left-section, .right-section {
+    display: flex;
+    align-items: center;
+}
+
+/* Mobile-specific styling */
+@media (max-width: 540px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .left-section {
+        width: 100%;
+        justify-content:stretch;
+        margin-bottom: 10px; /* Space between sections */
+    }
+
+    .right-section {
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 10px;
+        /* Optionally add space between items if needed */
+    }
+}
+#top-bar-user-icon.icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#top-bar-bookmarks-icon.icon{
+    width: 20px;
+    height: 20px;
+    margin-right: -10px;
+    fill: var(--accent-color);
+}
+
+.site-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.separator {
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.nav-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.hamburger-menu {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 25px;
+    cursor: pointer;
+    
+}
+
+#hambugher-menu-icon {
+    margin-top: -30px;
+}
+
+#hamburger-menu-close-icon {
+    transform: rotate(90deg);
+    width: 30px;
+    height: 30px;
+    margin-left: -20px;
+}
+
+button {
+    background-color: var(--main-color-2);
+    border: none;
+    color: var(--text-color)
+}
+
+#mode-icon {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 1;
+    transform: scale(1);
+}
+
+#mode-icon.fade-out {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+#mode-icon.fade-in {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Side Menu Styles */
+#side-menu {
+    position: fixed;
+    top: 0;
+    right: -350px; /* Start hidden off-screen */
+    width: 350px;
+    height: 100%;
+    background-color: var(--main-color-2);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease; /* Smooth slide-in effect */
+    z-index: 1000; /* Ensure it is on top */
+}
+
+/* Show side menu when 'open' class is added */
+#side-menu.open {
+    right: 0; /* Slide into view */
+}
+
+.side-menu-content button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+}
+
+.side-menu-content {
+    padding: 20px;
+}
+
+.side-menu-content img {
+    width: 24px;
+    height: 24px;}
+
+
+.side-menu-item {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-top: 10px;
+}
+
+/* Icon Styling */
+.material-icons{
+    font-size: 30px; /* Size of the icon */
+    color: var(--secondary-color); /* Icon color */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.text {
+    color:  var(--text-color);
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.horizzontal-spacer {
+    margin-top: 9px;
+    height: 2px;
+    margin-bottom: 9px;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+}
+
+div.centered-because-center-tag-is-deprecated-smh {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}

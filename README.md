@@ -1,0 +1,2 @@
+Hi, i'm ZeroKun265, a 19yo develope from italy
+This repo is actually meant to be viewed as a website, so please follow this link:[ZeroKun265.com](https://zerokun265.com) or, if the domain is no longer in my posession/haven't updated it, use the [Github pages link](zerokun265.github.io/ZeroKun265)
