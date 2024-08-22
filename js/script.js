@@ -1,4 +1,3 @@
-
 // Function to save the state (HTML classes) of the body
 function saveState(override = false) {
     console.log(override)
@@ -8,15 +7,15 @@ function saveState(override = false) {
     if (!localStorage.getItem('bodyClasses') && !override) {
         console.log("Tried to save but user never manually saved once: ignoring")
     } else {
-    // Body classes for dark/light mode
-    const bodyClasses = document.body.className;
-    localStorage.setItem('bodyClasses', bodyClasses);
-    // Dark mode toggle icon
-    const modeIconSrc = document.getElementById("mode-icon").src;
-    localStorage.setItem("modeIconSrc", modeIconSrc);
+        // Body classes for dark/light mode
+        const bodyClasses = document.body.className;
+        localStorage.setItem('bodyClasses', bodyClasses);
+        // Dark mode toggle icon
+        const modeIconSrc = document.getElementById("mode-icon").src;
+        localStorage.setItem("modeIconSrc", modeIconSrc);
     }
-  }
-  
+}
+
 // Function to load the state (HTML classes) of the body
 function loadState() {
     console.log("Loading")
@@ -66,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     setTimeout(() => {
                         modeIcon.classList.remove("fade-in");
                     }, 300); // Match this duration with the CSS transition
-                    }, 300); // This timeout matches the duration of the fade-out
-                });
+                }, 300); // This timeout matches the duration of the fade-out
+            });
 
             // Side menu functionality
             document.getElementById("hamburger-menu-button").addEventListener("click", function() {
@@ -75,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
             })
 
         });
-    
+
     fetch('side-menu.html')
         .then(response => response.text())
         .then(data => {
@@ -84,24 +83,24 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('hamburger-menu-close-button').addEventListener('click', function() {
                 document.getElementById('side-menu').classList.toggle('open');
             });
-            document.getElementById("nothing-back-menu-button").addEventListener("click", function () {
+            document.getElementById("nothing-back-menu-button").addEventListener("click", function() {
                 document.getElementById("side-menu").classList.remove('open');
-            })
+            });
             document.getElementById("blog-menu-button").addEventListener("click", function() {
                 window.location.href = "blog.html";
-            })
+            });
             document.getElementById("home-menu-button").addEventListener("click", function() {
                 window.location.href = "index.html";
-            })
+            });
             document.getElementById("cv-menu-button").addEventListener("click", function() {
                 window.location.href = "cv.html";
-            })
+            });
             document.getElementById("privacy-menu-button").addEventListener("click", function() {
                 window.location.href = "privacy.html";
-            })
+            });
             document.getElementById("socials-menu-button").addEventListener("click", function() {
                 window.location.href = "socials.html";
-            })
+            });
             // Close the menu when clicking outside
             document.addEventListener('click', function(event) {
                 const sideMenu = document.getElementById('side-menu');
