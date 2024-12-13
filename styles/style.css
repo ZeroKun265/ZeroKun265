@@ -167,6 +167,8 @@ button {
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     opacity: 1;
     transform: scale(1);
+    stroke: var(--accent-color) !important;
+    fill: var(--accent-color) !important;
 }
 
 #mode-icon.fade-out {

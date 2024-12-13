@@ -93,13 +93,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.location.href = "index.html";
             });
             document.getElementById("cv-menu-button").addEventListener("click", function() {
-                window.location.href = "cv.html";
+                window.location.href = "projects.html";
             });
             document.getElementById("privacy-menu-button").addEventListener("click", function() {
                 window.location.href = "privacy.html";
             });
             document.getElementById("socials-menu-button").addEventListener("click", function() {
-                window.location.href = "socials.html";
+                window.location.href = "socials-contacts.html";
             });
             // Close the menu when clicking outside
             document.addEventListener('click', function(event) {
