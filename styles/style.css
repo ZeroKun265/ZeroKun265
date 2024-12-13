@@ -50,6 +50,7 @@ body {
     --secondary-color: #615f81;
     --accent-color: #34113F;
     --text-color: rgb(8, 9, 10);
+    --hover-color: #9f09b9;
 }
 
 .dark-mode {
@@ -59,6 +60,7 @@ body {
     --secondary-color: #4F518C;
     --text-color: rgb(212, 242, 210);
     --accent-color: #EA859E;
+    --hover-color: #e7b5c1;
 }
                     
 
@@ -263,6 +265,11 @@ ul li::marker {
     color: var(--accent-color)
 }
 
+ul {
+    list-style-position: inside; /* Aligns the marker with the text */
+    padding: 0; /* Removes any default padding from the list */
+}
+
 .row {
     display: flex;
     gap: 20px; /* Optional spacing between columns */
@@ -281,9 +288,45 @@ ul li::marker {
     }
 }
 
-a:link, a:visited {
-    color: var(--accent-color); /* Or any desired color */
+/* Basic link styles */
+a:link, 
+a:visited {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
+
+/* Specific styling for socials links */
+.socials-link {
+    position: relative;
+    font-weight: bold; /* Optional for emphasis */
+    display: inline-block;
+}
+
+/* Hover effect for socials links */
+.socials-link:hover {
+    color: var(--hover-color); /* Set to a contrasting color */
+    transform: scale(1.1); /* Slightly increase size */
+}
+
+/* Underline effect with pseudo-element */
+.socials-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: var(--hover-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.socials-link:hover::after {
+    transform: scaleX(1);
+}
+
 
 .project-image-card {
     border-radius: 10px;
@@ -298,3 +341,8 @@ a:link, a:visited {
     border-radius: 10px; /* Ensures rounded corners match the card */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
+b {
+    color: var(--accent-color);
+}
+
