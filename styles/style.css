@@ -104,6 +104,18 @@ body {
         margin-bottom: 10px;
         /* Optionally add space between items if needed */
     }
+    a.nav-link {
+        font-size: 13px;
+    }
+
+    #top-bar-bookmarks-icon {
+        visibility: collapse;
+        width: 0%;
+    }
+    span.separator {
+        visibility: collapse;
+        width: 0%;
+    }
 }
 #top-bar-user-icon.icon{
     width: 30px;
@@ -192,6 +204,20 @@ button {
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     transition: right 0.3s ease; /* Smooth slide-in effect */
     z-index: 1000; /* Ensure it is on top */
+}
+
+@media (max-width: 540px) {
+    #side-menu {
+        position: fixed;
+        top: 0;
+        right: -240px; /* Start hidden off-screen */
+        width: 240px;
+        height: 100%;
+        background-color: var(--main-color-2);
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: right 0.3s ease; /* Smooth slide-in effect */
+        z-index: 1000; /* Ensure it is on top */
+    }
 }
 
 /* Show side menu when 'open' class is added */
